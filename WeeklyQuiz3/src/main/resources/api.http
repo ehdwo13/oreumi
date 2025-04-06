@@ -1,0 +1,31 @@
+### 모든 Member 조회
+GET http://localhost:8080/members
+Accept: application/json
+
+### 모든 Team 조회
+GET http://localhost:8080/teams
+Accept: application/json
+
+### 팀 추가
+POST http://localhost:8080/teams
+Content-Type: application/json
+
+{
+  "name": "서울FC"
+}
+
+### 팀 수정
+PUT http://localhost:8080/teams/5
+Content-Type: application/json
+
+{
+  "name": "인천유나이티드"
+}
+
+### 특정 팀에 멤버 추가
+POST http://localhost:8080/members/teams/5
+Content-Type: application/json
+
+{
+  "name": "test1"
+}
